@@ -1,0 +1,208 @@
+/*全局样式*/
+.admin-container{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body,html{
+	height: 100%;
+}
+
+
+/* 主题颜色 */
+.main-color{
+	background-color: #97c3e6;  
+}
+
+/* 主要背景颜色 */
+
+/*浅灰色*/
+.bg1{
+	background-color: #fefefe; 
+}
+
+/*深蓝色*/
+.bg2{
+	background-color: #36415d;
+}
+
+/*粉紫色*/
+.bg3{
+	background-color: #b76a86;
+}
+
+/*浅蓝色*/
+.bg4{
+	background-color: #d7e9f7;
+}
+/*中蓝色*/
+.bg5{
+	background-color: #709fd5;
+}
+
+/*深灰色*/
+.bg6{
+	background-color: #676767;
+}
+
+
+
+/*主要字体颜色*/
+
+
+/* 深蓝色文字加深，插画 */
+.f1{
+	color: #36415d;
+}
+/* 重要文字、功能名称、文章标题 */
+.f2{
+	color: #676767;
+}
+/* 文章内容颜色 */
+.f3{
+	color: #454545;
+}
+/* 次要信息如点赞、日期 */
+.f4{
+	color: #cccff3
+}
+/*颜色同主要颜色，用于标题*/
+.f5{
+	color: #97c3e6;
+}
+
+/*浅蓝色*/
+.f6{
+	color: #d7e9f7;
+}
+
+/*粉紫色*/
+.f7{
+	color: #b76a86;
+}
+
+/*后台管理页相关样式*/
+
+/* 头部 */
+
+header{
+	width: 1000px;
+	margin: 50px auto 0;
+
+	p.title{
+		font-size: 34px;
+		color: $dark-blue;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	p.logout{
+		height: 40px;
+		line-height: 40px;
+		background-color: $main-color;
+		color: $dark-blue;
+		font-size: 14px;
+		text-align: right; 
+		border-bottom: 1px solid $dark-blue;
+		padding-right: 15px;
+	} 
+}
+
+/* 侧边导航栏 */
+
+
+.side-nav{
+	display: block;
+	list-style: none;
+	width: 140px;
+	float: left;
+	a{
+		display: inline-block;
+		width: 140px;
+		text-decoration: none;
+		background-color: $main-color;
+		color: $dark-blue;
+		font-size: 16px;
+		height: 40px;
+		line-height: 40px;
+		text-align:center;
+	}
+	a:hover{
+		color: $mid-blue;
+	}
+	li + li{
+		border-top: 1px solid $dark-blue;
+	}
+
+}
+.current{
+	background-color: $dark-blue !important;
+	color: $main-color !important;
+}
+
+
+
+/* 工具样式 */
+
+.center-block{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pull-right{
+	float: left !important;
+}
+
+.pull-right{
+	float: right !important;
+}
+
+.text-right{
+	text-align: right !important;
+}
+
+.text-left{
+	text-align: left !important;
+}
+
+.text-center{
+	text-align: center !important;
+}
+
+.hide{
+	display: none !important; /* 只是隐藏，看不见 */
+}
+
+.show{
+	display: block !important;
+}
+
+.invisible{
+	visibility: hidden; /* 不会挤占元素空间 */
+}
+
+.text-hide{
+	font: 0/0 a;/* 字号0，行高0 a字体（不存在，滥竽充数） */
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+.clearfix:before,
+.clearfix:after{
+	content: '';
+	display: table;
+}
+
+.clearfix:after{
+	clear: both;
+}
+
+
+

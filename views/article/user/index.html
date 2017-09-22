@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>一名前端小白的进阶之路</title>
+	<link rel="stylesheet" href="/css/nav.css"/>
+	<link rel="stylesheet" href="/css/main.css"/>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="stylesheet" href="/css/article/user-index.css"/>
+</head>
+<body>
+
+	<nav id='nav' class="clearfix">
+		<div class="nav-info">
+			<h1>刘可欣的个人博客</h1>
+			<h5>欣星之火，可以燎原</h5> 
+		</div>
+		<ul class="clearfix">
+			<li><a href="/">首页</a></li>
+			<li><a class="current" href="#">文章</a></li>
+			<li><a href="/dailyrecord">碎言碎语</a></li>
+			<li><a href="/messageboard">留言板</a></li>
+		</ul>
+	</nav>
+
+	
+
+	<div class="container  clearfix">
+		<div class="article-list">
+			<%if(tid == undefined) {%>
+			<div class="article-type">所有文章</div>
+		<%}else{%>
+
+		<div class="article-type"><%=type[tid-1].type%></div>
+	<%}%>
+
+	<%data.forEach(function(item) {%>
+	<div class="article-item">
+		<%function dateFormat(inputTime) {%>
+		<%var inputArr = inputTime.split(' ');%>
+		<%var date = inputArr[0];%>
+		<%return date;%>
+		<%}%>
+		<div class="date"><%=dateFormat(item.publishtime)%></div>
+		<a href="/article/details?id=<%=item.id%>" class="title"><%=item.title%></a>
+		<div class="intro"><%=item.intro%>
+		</div>
+	</div>
+	<%});%>
+
+</div>
+<div class="type-list">
+	<div class="title">文章分类</div>
+	<a href="/article" class="type-item">所有文章</a>
+	<%type.forEach(function(item) {%>
+	<a href="/article/type?id=<%=item.id%>" class="type-item"><%=item.type%></a>
+	<%});%>
+</div>
+</div>
+</body>
+</html>

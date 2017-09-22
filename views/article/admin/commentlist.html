@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>评论列表</title>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/admin-list.css">
+
+</head>
+<body>
+	<header>
+		<a href="/article/admin/articlelist">返回</a>
+		<p>评论列表</p>
+	</header>
+	<div class="comment-list">
+		<%comment.forEach(function(item) {%>
+		<div class="comment-item">
+			<div class="comment-info clearfix">
+				<span><%=item.id%></span>
+				<span>name</span><%=item.name%>
+				<span>email</span><%=item.email%>
+				<span>个人首页</span><%=item.hostpage%>
+				<span>时间</span><%=item.time%>
+				<a href="/article/admin/modifycomment?id=<%=item.id%>">修改</a>
+				<a href="/article/admin/deletecomment?id=<%=item.id%>">删除</a>
+			</div>
+
+			<div class="comment-content"><%=item.content%></div>
+		</div>
+
+		<%});%>
+	</div>
+</body>
+</html>

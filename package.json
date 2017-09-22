@@ -1,0 +1,36 @@
+{
+  "name": "node-blog",
+  "version": "1.0.0",
+  "description": "使用node，express，mysql搭建个人博客系统",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kexinWeb/node-blog.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mysql",
+    "blog"
+  ],
+  "author": "liu kexin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kexinWeb/node-blog/issues"
+  },
+  "homepage": "https://github.com/kexinWeb/node-blog#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-session": "^1.15.1",
+    "mysql": "^2.13.0"
+  },
+  "devDependencies": {
+    "ejs": "^2.5.6"
+  }
+}

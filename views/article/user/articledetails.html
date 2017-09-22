@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>一名前端小白的进阶之路</title>
+	<link rel="stylesheet" href="/css/nav.css"/>
+	<link rel="stylesheet" href="/css/main.css"/>
+	<link rel="stylesheet" href="/css/article/user-index.css"/>
+	<link rel="stylesheet" href="/editor.md/css/editormd.css"/>
+	<link rel="stylesheet" href="/editor.md/examples/css/style.css"/>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<script type="text/javascript" src='/js/vendor/ajax.js'></script>
+</head>
+<body>
+
+	<nav id='nav' class="clearfix">
+		<div class="nav-info">
+			<h1>刘可欣的个人博客</h1>
+			<h5>欣星之火，可以燎原</h5> 
+		</div>
+		<ul class="clearfix">
+			<li><a href="/">首页</a></li>
+			<li><a class="current" href="#">文章</a></li>
+			<li><a href="/dailyrecord">碎言碎语</a></li>
+			<li><a href="/messageboard">留言板</a></li>
+		</ul>
+	</nav>
+	<%function dateFormat(inputTime) {%>
+	<%var inputArr = inputTime.split(' ');%>
+	<%var date = inputArr[0];%>
+	<%return date;%>
+	<%}%>
+
+	<div class="container  clearfix">
+		<div class="article-list">
+			<div class="article-details">
+				<div class="article-type">文章分类:&nbsp;&nbsp;<%=type[details.tid-1].type%></div>	
+				<div class="date"><%=details.time%></div>
+				<div class="content">
+					<div class="markdown-body editormd-preview-container">
+						<%-details.htmlcontent%>
+					</div>
+				</div>
+				<p class="num clearfix"><span>阅读量 <%=details.viewnum%></span><span id="praise" class="heart-img"></span><span id="praisenum" num="<%=details.praisenum%>"><%=details.praisenum%></span></p>
+			</div>
+			<div class="comment-list">
+				<div class="comment-num">评论(<%=comment.length%>)</div>
+				<%comment.forEach(function(item) {%>
+				<div class="comment-item">
+					<div class="comment-name"><%=item.name%></div>
+					<div class="comment-time"><%=dateFormat(item.time)%></div>
+					<div class="comment-content"><%=item.content%></div>
+				</div>
+				<%});%>
+
+			</div>
+
+			<div class="addcomment">
+				<div class="title">发表评论</div>
+				<div class="input-item">
+					<p>用户名</p>
+					<input id="name" type="text" placeholder="必填"/>
+				</div>
+				<div class="input-item">
+					<p>邮箱(不公开,可以一起交流交流)</p>
+					<input id="email" type="text" placeholder="非必填"/>
+				</div>
+				
+				<div class="input-item">
+					<p>个人首页(不公开)</p>
+					<input id="hostpage" type="text" placeholder="非必填"/>
+				</div>
+
+				<textarea id="content" class="content" rows="3"></textarea>
+				<button class="submit" id="submit">发表评论</button>
+
+				
+			</div>
+		</div>
+
+		<div class="type-list">
+			<div class="title">文章分类</div>
+			<a href="/article" class="type-item">所有文章</a>
+			<%type.forEach(function(item) {%>
+			<a href="/article/type?id=<%=item.id%>" class="type-item"><%=item.type%></a>
+			<%});%>
+		</div>
+	</div>
+	<script type="text/javascript" src='/js/article/addcomment.js'></script>
+	<script type="text/javascript" src='/js/article/addnum.js'></script>
+</body>
+</html>

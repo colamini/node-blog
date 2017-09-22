@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改文章评论</title>
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="stylesheet" href="/css/admin-list.css">
+	<script type="text/javascript" src='/js/vendor/ajax.js'></script>
+	
+
+</head>
+<body>
+	<header>
+	    <a href="/article/admin/articlelist">返回</a>
+		<p>修改留言</p>
+	</header>
+	<div class="modify-container">
+	<div class="modify-info">
+		<span><%=data.id%></span>
+		<span><%=data.time%></span>
+	</div>
+		<div class="modify-item">
+			<span>用户</span>
+			<input type="text" id="name" value="<%=data.name%>">
+		</div>
+		<div class="modify-item">
+			<span>邮箱</span>
+			<input type="text" id="email" value="<%=data.email%>">
+		</div>
+		<div class="modify-item">
+			<span>首页</span>
+			<input type="text" id="hostpage" value="<%=data.hostpage%>">
+		</div>
+			<div class="modify-item">
+			<span>内容</span>
+			<textarea id="content"><%=data.content%></textarea> 
+		</div>
+		<button id="submit">提交修改</button>
+	</div>
+	<script type="text/javascript" src='/js/messageboard/modifymessage.js'></script>
+</body>
+</html>

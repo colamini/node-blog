@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 56.296%;
+  margin: 90px auto; }
+
+.message-list {
+  margin-bottom: 90px; }
+
+.message-num {
+  margin-bottom: 40px;
+  color: #36415d;
+  font-size: 16px;
+  font-weight: bold; }
+
+.message-item {
+  margin-bottom: 35px; 
+  padding-bottom: 20px;
+ border-bottom: 3px double #ccc;}
+  .message-item .date {
+    color: #898989;
+    font-size: 12px;
+    margin-bottom: 20px; }
+    .message-item .date span {
+      display: inline-block;
+      
+      color: #b76a86;
+      font-size: 22px;
+      font-weight: bold; }
+  .message-item .name {
+    color: #36415d;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px; }
+  .message-item .content {
+    color: #676767;
+    font-size: 16px;
+    line-height: 25px; 
+   }
+
+.addmessage {
+  margin-top: 90px; }
+  .addmessage .title {
+    color: #36415d;
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 18px; }
+  .addmessage .input-item p {
+    color: #454545;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 5px; }
+  .addmessage .input-item input {
+    display: block;
+    width: 96.5%;
+    height: 35px;
+    outline: 0;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    padding: 0 15px;
+    color: #454545;
+    margin-bottom: 20px; }
+  .addmessage .content {
+    color: #454545;
+    display: block;
+    margin-top: 20px;
+    width: 96.5%;
+    border: 1px solid #aaa;
+    outline: 0;
+    font-size: 16px;
+    line-height: 25px;
+    border-radius: 2px;
+    height: 100px;
+    padding: 2px 15px; }
+  .addmessage .input-item input:focus, .addmessage .content:focus {
+    border: 1px solid #709fd5; }
+  .addmessage .submit {
+    display: block;
+    width: 100px;
+    margin-top: 20px;
+    background-color: #36415d;
+    color: #d7e9f7;
+    outline: 0;
+    font-size: 14px;
+    border: 0 solid transparent;
+    height: 40px;
+    border-radius: 2px; }
+
+/*# sourceMappingURL=index.css.map */

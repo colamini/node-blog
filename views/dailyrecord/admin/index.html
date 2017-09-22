@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>碎言碎语</title>
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/admin-list.css">
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<script type="text/javascript" src='/js/vendor/ajax.js'></script>
+
+</head>
+<body>
+	<header>
+		<a href="/article/admin/articlelist">返回</a>
+		<p>碎言碎语</p>
+	</header>
+	<div class="comment-list">
+		<%data.forEach(function(item) {%>
+		<div class="comment-item">
+			<div class="comment-info clearfix">
+				<span><%=item.id%></span>
+				<span>时间</span><%=item.publishtime%>
+				<a href="/dailyrecord/admin/modifyrecord?id=<%=item.id%>">修改</a>
+				<a href="/dailyrecord/admin/deleterecord?id=<%=item.id%>">删除</a>
+			</div>
+			<div class="comment-content"><%=item.content%></div>
+		</div>
+
+		<%});%>
+		<div class="add-record">
+			<textarea id="content"></textarea>
+			<button id="submit">发布生活记录</button>
+		</div>
+	</div>
+	<script type="text/javascript" src='/js/dailyrecord/addrecord.js'></script>
+</body>
+</html>

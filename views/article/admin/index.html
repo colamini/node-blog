@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文章管理页</title>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="stylesheet" href="/css/admin.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<script type="text/javascript" src="/js/vendor/ajax.js"></script>
+</head>
+<body>
+	<header>
+		<p class="title">刘可欣个人博客后台管理系统</p>
+		<div class="header-bar clearfix">
+			<a class="logout" id="logout">退出</a>
+		</div>
+
+	</header>
+
+	<div class="admin-container clearfix">
+		<ul class="side-nav">
+
+			<li><a class="current" href="/article/admin">文章分类</a></li>
+			<li><a href="/article/admin/articlelist">文章列表</a></li>
+			<li><a href="/article/admin/addarticle">写文章</a></li>
+			<li><a href="/dailyrecord/admin">碎言碎语</a></li>
+			<li><a href="/messageboard/admin">留言板</a></li>
+		</ul>
+		<ul class="list-wrap">
+			<li class="list-item">
+				<a class="list-content" href="/article/admin/articlelist">所有文章</a>
+			</li>
+			<% type.forEach(function(item) {%>
+			<li class="list-item">
+				<a class="list-content" href="/article/admin/articlelist?id=<%=item.id%>"><%=item.type%></a>
+				<a class="button-modify" href="/article/admin/modifytype?id=<%=item.id%>">修改</a>
+				<a class="button-delete" href="/article/admin/deletetype?id=<%=item.id%>">删除</a>
+			</li>
+			<%});%>
+			<li class="list-item">
+				<input class="input" id="type" type="text"/>
+				<button class="button-modify" id="submit">增加文章分类</button>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="/js/article/addtype.js"></script>
+
+
+</body>
+</html>

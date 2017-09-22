@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文章列表页</title>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="stylesheet" href="/css/admin.css">
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<header>
+		<p class="title">刘可欣个人博客后台管理系统</p>
+		<div class="header-bar clearfix">
+			<a class="logout" id="logout">退出</a>
+		</div>
+
+	</header>
+
+	<div class="admin-container clearfix">
+		<ul class="side-nav">
+
+			<li><a href="/article/admin">文章分类</a></li>
+			<li><a class="current" href="/article/admin/articlelist">文章列表</a></li>
+			<li><a href="/article/admin/addarticle">写文章</a></li>
+			<li><a href="/dailyrecord/admin">碎言碎语</a></li>
+			<li><a href="/messageboard/admin">留言板</a></li>
+		</ul>
+		<ul class="list-wrap">
+			<%data.forEach(function(item) {%>
+			<li class="list-item">
+				<a class="list-content" href="/article/admin/modifyarticle?id=<%=item.id%>"><%=item.title%></a>		
+				<a class="button-comment" href="/article/admin/commentlist?id=<%=item.id%>">查看评论</a>
+				<a class="button-delete" href="/article/admin/deletearticle?id=<%=item.id%>">删除</a>
+				<a class="button-modify" href="/article/admin/modifyarticle?id=<%=item.id%>">修改</a>
+			</li>
+			<%});%>
+		</ul>
+	</div>
+
+</body>
+</html>

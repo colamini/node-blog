@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 920px;
+  margin: 90px auto;
+   }
+
+.record-item {
+  position: relative; }
+
+.br-right {
+  float: left;
+  border-right: 3px solid #d7e9f7; }
+
+.content {
+  width: 613px;
+  background-color: #eee;
+  padding: 20px;
+  float: left;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 25px;
+  color: #666;
+  text-indent: 5px; }
+
+.tri {
+  width: 22px;
+  height: 22px;
+  background: url("../../img/tri.png");
+  background-size: cover;
+  float: left;
+  margin: 8px 5px 0 3px; }
+
+.star {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 10px;
+  left: 677px;
+  background: url("../../img/star.png") no-repeat;
+  background-size: cover; }
+
+.date {
+  float: left;
+  width: 160px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #36415d;
+  text-align: center;
+  margin: 15px 0 0 16px;
+  font-size: 12px;
+  color: #d7e9f7;
+  border-radius: 0 30px 0 30px; }
+
+.content-hover {
+  background-color: #dedede; }
+
+.date-hover {
+  background-color: #709fd5;
+  color: #36415d; }
+
+.star-hover {
+  background: url("../../img/star-active.png") no-repeat;
+  background-size: cover; }
+
+.tri-hover {
+  background: url("../../img/tri-active.png") no-repeat;
+  background-size: cover; }
+
+/*# sourceMappingURL=index.css.map */

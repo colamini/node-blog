@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改生活记录</title>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/admin-list.css">
+	<script type="text/javascript" src='/js/vendor/ajax.js'></script>
+
+</head>
+<body>
+	<header>
+		<a href="/article/admin/articlelist">返回</a>
+		<p>修改生活记录</p>
+	</header>
+	<div class="modify-container">
+		<div class="modify-info">
+			<span><%=data.id%></span>
+			<span><%=data.publishtime%></span>
+		</div>
+		<div class="modify-item">
+			<span>内容</span>
+			<textarea id="content"><%=data.content%></textarea> 
+		</div>
+		<button id="submit">确定修改</button>
+	</div>
+	<script type="text/javascript" src='/js/dailyrecord/modifyrecord.js'></script>
+</body>
+</html>

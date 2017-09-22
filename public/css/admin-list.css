@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+header a {
+  display: block;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  
+  color: #36415d;
+  text-decoration: none;
+  border: 2px solid #36415d;
+  border-radius: 5px; }
+
+header p {
+  width: 1000px;
+  height: 50px;
+  margin: 0 auto 50px;
+  color: #36415d;
+  font-size: 32px;
+  text-align: center; }
+
+.comment-list {
+  width: 1000px;
+  margin: 30px auto; }
+
+.comment-item {
+  width: 100%;
+  margin-bottom: 55px;
+  border-bottom: 1px dashed #ccc; }
+  .comment-item .comment-info {
+    color: #454545;
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 20px; }
+    .comment-item .comment-info span {
+      display: inline-block;
+      color: #b76a86;
+      font-weight: bold;
+      font-size: 16px; }
+    .comment-item .comment-info span:first-child {
+      width: 60px;
+      height: 25px;
+      text-align: center;
+      background-color: #36415d;
+      color: #d7e9f7;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 14px; }
+    .comment-item .comment-info span:not(:first-child) {
+      margin: 0 10px 0 30px; }
+    .comment-item .comment-info a {
+      text-decoration: none;
+      display: inline-block;
+      padding: 0 5px;
+      margin-left: 10px;
+      height: 20px;
+      line-height: 20px;
+      margin-top: 2px;
+      font-size: 14px;
+      color: #fff;
+      background-color: #b76a86;
+      border-radius: 5px;
+      outline: 0;
+      border: 0 solid transparent;
+      float: right; }
+  .comment-item .comment-content {
+    color: #454545;
+    line-height: 30px;
+    margin-bottom: 10px;
+    font-size: 16px; }
+
+.add-record textarea {
+  display: block;
+  border-radius: 5px;
+  width: 98%;
+  height: 75px;
+  line-height: 25px;
+  padding: 5px 10px;
+  color: #676767;
+  background-color: #d5d5d5;
+  border: 0 solid transparent;
+  outline: 0;
+  margin-bottom: 15px; }
+.add-record textarea:focus {
+  border: 1px solid #36415d; }
+.add-record button {
+  display: inline-block;
+  color:  #d7e9f7;
+  background-color:#36415d;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 0 solid transparent;
+  outline: 0;
+   }
+.modify-container {
+  width: 1000px;
+  margin: 50px auto; }
+  .modify-container .modify-item, .modify-container .modify-info {
+    width: 100%;
+    margin-bottom: 30px; }
+  .modify-container .modify-info span {
+    display: inline-block;
+    margin-right: 20px;
+    height: 30px;
+    padding: 0 5px;
+    font-weight: bold;
+    color: #b76a86;
+    font-size: 14px; }
+  .modify-container .modify-item span {
+    display: inline-block;
+    color: #36415d;
+    font-weight: bold;
+    margin-right: 15px;
+    line-height: 35px; }
+  .modify-container .modify-item input, .modify-container .modify-item textarea {
+    display: inline-block;
+    color: #454545;
+    font-weight: bold;
+    text-indent: 10px;
+    line-height: 35px;
+    background-color: #efefef;
+    border: 0 solid transparent;
+    border-radius: 5px;
+    font-size: 16px; }
+  .modify-container .modify-item input:focus {
+    border: 1px solid #36415d; }
+  .modify-container .modify-item textarea {
+    padding: 5px 10px;
+    width: 100%;
+    height: 70px; }
+  .modify-container #submit {
+    display: inline-block;
+    border-radius: 5px;
+    color: #36415d;
+    background-color: #d7e9f7;
+    outline: 0;
+    font-size: 18px;
+    font-weight: bold;
+    border: 0 solid transparent;
+    padding: 5px 10px; }
+
+/*# sourceMappingURL=admin-list.css.map */

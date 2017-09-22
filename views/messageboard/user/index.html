@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>一名前端小白的进阶之路</title>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="stylesheet" href="/css/nav.css"/>
+	<link rel="stylesheet" href="/css/messageboard/user-index.css"/>
+	<script type="text/javascript" src="/js/vendor/ajax.js"></script>
+</head>
+<body>
+
+	<nav id='nav' class="clearfix">
+		<div class="nav-info">
+			<h1>刘可欣的个人博客</h1>
+			<h5>欣星之火，可以燎原</h5> 
+		</div>
+		<ul class="clearfix">
+			<li><a href="/">首页</a></li>
+			<li><a href="/article">文章</a></li>
+			<li><a href="/dailyrecord">碎言碎语</a></li>
+			<li><a class="current" href="#">留言板</a></li>
+		</ul>
+	</nav>
+
+	<%function getYear(inputTime){%>
+	<%var inputArr = inputTime.split('-');%>
+	<%var year = inputArr[0];%>
+	<%return year;%>
+	<%}%>
+	<%function getMonthDay(inputTime){%>
+	<%var inputArr = inputTime.split(' ');%>
+	<%var time = inputArr[0];%>
+	<%var monthday = time.split('-');%>
+	<%var monthday = monthday[1] + '-' + monthday[2];%>
+	<%return monthday;%>
+	<%}%>
+
+	<%let length = message.length;%>
+
+	<div class="container">
+
+		<div class="message-list">
+			<div class="message-num">留言(<%=length%>)</div>
+			<%message.forEach(function(item) {%>
+			<div class="message-item">
+				<div class="date"><span><%=getYear(item.time)%></span><%=getMonthDay(item.time)%></div>
+				<div class="name"><%=item.name%></div>
+				<div class="content"><%=item.content%>
+				</div>
+			</div>
+			<%});%>
+
+		</div>
+
+		<div class="addmessage">
+			<div class="title">说说两句吧！</div>
+			<div class="input-item">
+				<p>用户名</p>
+				<input id="name" type="text" placeholder="必填"/>
+			</div>
+			<div class="input-item">
+				<p>邮箱(不公开)</p>
+				<input id="email" type="text" placeholder="非必填"/>
+			</div>
+
+			<div class="input-item">
+				<p>个人首页(不公开)</p>
+				<input id="hostpage" type="text" placeholder="非必填"/>
+			</div>
+
+			<textarea id="content" class="content" rows="3"></textarea>
+			<button class="submit" id="submit">留言</button>
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/js/messageboard/addmessage.js"></script>
+</body>
+</html>

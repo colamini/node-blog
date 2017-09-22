@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8" />
+	<title>发布文章</title>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="stylesheet" href="/editor.md/examples/css/style.css" />
+	<link rel="stylesheet" href="/editor.md/css/editormd.css" />
+	<link rel="stylesheet" href="/css/article/addarticle.css" />
+	<script type="text/javascript" src='/js/vendor/ajax.js'></script>
+</head>
+<body>
+	<div id="layout">
+		<header>
+			<a href="/article/admin">返回</a>
+			<div>
+				<span>标题<input  class="title" id="title" type="text"></span>
+				<span>作者<input   class="author"id="author" type="text"></span>
+				<span>分类
+					<select name="ariticle-type" class="article-type" id="type">
+						<%type.forEach(function(item) {%>
+						<option value="<%=item.id%>"><%=item.type%></option>
+						<%});%>
+					</select>
+				</span></br>
+				<span>简介<input class="intro" id="intro" type="text"></span>
+			</div>
+		</header>
+		<div id="test-editormd">
+			<textarea style="display:none;"></textarea>
+		</div>
+		<div>
+			<button id="submit">发布文章</button>
+			<button id="preview-btn">preview</button>
+		</div>
+	</div>
+	<script src="/editor.md/examples/js/jquery.min.js"></script>
+	<script src="/editor.md/editormd.min.js"></script>
+	<script type="text/javascript" src='/js/article/addarticle.js'></script>
+</body>
+</html>
